@@ -1,1 +1,6 @@
 QR Code Generator block for Mahara 1.4.x
+
+Changelog
+
+13/07/2012
+  Removed the Google Image Chart Api dependency. The QR Code Generator block now uses the jquery plugin (https://github.com/jeromeetienne/jquery-qrcode) to generate the QR codes. Unfortunatley the Image Charts portion of Google Chart Tools has been officially deprecated as of April 20, 2012.

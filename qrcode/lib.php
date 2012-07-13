@@ -69,13 +69,11 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
 		$mode = (!strpos(get_script_path(), 'blocks.php') ? 'view' : 'edit');
 		
 		switch ($size){
-			case 'small': $size = '100x100';
+			case 'small': $height = '100'; $width = '100';
 			break;
-			case 'medium': $size = '200x200';
+			case 'medium': $height = '200'; $width = '200';
 			break;
-			case 'big': $size = '300x300';
-			break;
-			case 'custom': $size = $height + 'x' + $width;
+			case 'big': $height = '300'; $width = '300';
 			break;
 		}
 
@@ -135,7 +133,8 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
 		}
         $smarty = smarty_core();
         $smarty->assign('align', $align);
-		$smarty->assign('size', $size);
+		$smarty->assign('width', $width);
+		$smarty->assign('height', $height);
         $smarty->assign('qrcode', rawurlencode($qrcode));
         $smarty->assign('mode', $mode);
 
