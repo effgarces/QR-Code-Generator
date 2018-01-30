@@ -19,16 +19,14 @@
  *
  * @package    mahara
  * @subpackage blocktype-qrcode
- * @author     Emanuel Garcês
+ * @author     Emanuel Garcï¿½s
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2011 Emanuel Garcês
+ * @copyright  (C) 2011 Emanuel Garcï¿½s
  *
  */
 
 defined('INTERNAL') || die();
 
 $config = new StdClass;
-$config->version = 2012071300;
-$config->release = '0.0.3';
-
-?>
+$config->version = 2018012900;
+$config->release = '0.0.3-lite';

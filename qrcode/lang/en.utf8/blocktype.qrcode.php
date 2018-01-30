@@ -19,9 +19,9 @@
  *
  * @package    mahara
  * @subpackage blocktype-qrcode
- * @author     Emanuel Garcês
+ * @author     Emanuel Garcï¿½s
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL
- * @copyright  (C) 2011 Emanuel Garcês
+ * @copyright  (C) 2011 Emanuel Garcï¿½s
  *
  */
 
@@ -29,8 +29,6 @@ defined('INTERNAL') || die();
 
 $string['title'] = 'QR Code Generator';
 $string['description'] = 'Generate QR codes';
-
-$string['previewonly'] = 'This is static preview preview of your QRCode';
 
 $string['showtitle'] = 'Show Block Title?';
 
@@ -47,36 +45,3 @@ $string['size_custom'] = 'Custom size';
 
 $string['height'] = 'Height';
 $string['width'] = 'Width';
-
-$string['type'] = 'Type';
-$string['type_profile'] = 'Profile';
-$string['type_current_page'] = 'Current Page';
-$string['type_page'] = 'Page';
-$string['type_vcard'] = 'vCard';
-$string['type_mecard'] = 'meCard';
-$string['type_email'] = 'Email Address';
-$string['type_emailmessage'] = 'Email Message';
-$string['type_phone'] = 'Phone number';
-$string['type_smsmessage'] = 'Message';
-$string['type_sms'] = 'SMS message';
-$string['type_text'] = 'Text';
-$string['type_url'] = 'Website URL';
-
-$string['website_url'] = 'Website URL';
-$string['email'] = 'Email';
-$string['subject'] = 'Subject';
-$string['phone_number'] = 'Phone number';
-$string['page'] = 'Page';
-
-$string['first_name'] = 'First name';
-$string['last_name'] = 'Last name';
-$string['address'] = 'Address';
-
-$string['missing_name'] = 'Please fill the First Name field and/or Last Name';
-$string['missing_email'] = 'Please fill the email field';
-$string['missing_emailmessage'] = 'Please fill the email and text fields';
-$string['missing_phone'] = 'Please fill the phone number';
-$string['missing_sms'] = 'Please fill the phone number and sms fields';
-$string['missing_text'] = 'Please fill the text field';
-$string['missing_website_url'] = 'Please fill the website url field';
-?>
