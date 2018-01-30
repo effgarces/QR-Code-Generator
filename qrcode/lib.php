@@ -73,6 +73,7 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
         $smarty->assign('width', $width);
         $smarty->assign('height', $height);
         $smarty->assign('qrcode', rawurlencode($qrcode));
+        $smarty->assign('blockid', $instance->get('id'));
         return $smarty->fetch('blocktype:qrcode:qrcode.tpl');
     }
 
