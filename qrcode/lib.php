@@ -48,13 +48,16 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
         $width = (!empty($configdata['width']) ? hsc($configdata['width']) : '200');
 
         switch ($size) {
-            case 'small': $height = '100';
+            case 'small':
+                $height = '100';
                 $width = '100';
                 break;
-            case 'medium': $height = '200';
+            case 'medium':
+                $height = '200';
                 $width = '200';
                 break;
-            case 'big': $height = '300';
+            case 'big':
+                $height = '300';
                 $width = '300';
                 break;
         }
@@ -85,11 +88,6 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
         $configdata = $instance->get('configdata');
 
         return array(
-            'showtitle' => array(
-                'type' => 'checkbox',
-                'title' => get_string('showtitle', 'blocktype.qrcode'),
-                'defaultvalue' => (!empty($configdata['showtitle']) ? hsc($configdata['showtitle']) : 0),
-            ),
             'size' => array(
                 'type' => 'radio',
                 'title' => get_string('size', 'blocktype.qrcode'),
@@ -117,13 +115,6 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
                 'class' => ((isset($configdata['size']) && hsc($configdata['size']) == 'custom') ? '' : 'hidden'),
             ),
         );
-    }
-
-    public static function instance_config_save($values) {
-        if (empty($values['showtitle'])) {
-            $values['title'] = '';
-        }
-        return $values;
     }
 
     public static function default_copy_type() {
