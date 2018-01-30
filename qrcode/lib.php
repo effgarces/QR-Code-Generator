@@ -114,6 +114,16 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
                 'defaultvalue' => (!empty($configdata['width']) ? hsc($configdata['width']) : '200'),
                 'class' => ((isset($configdata['size']) && hsc($configdata['size']) == 'custom') ? '' : 'hidden'),
             ),
+            'align' => array(
+                'type' => 'radio',
+                'title' => get_string('align', 'blocktype.qrcode'),
+                'defaultvalue' => (!empty($configdata['align'])) ? hsc($configdata['align']) : 'left',
+                'options' => array(
+                    'left' => get_string('alignleft', 'blocktype.qrcode'),
+                    'center' => get_string('aligncenter', 'blocktype.qrcode'),
+                    'right' => get_string('alignright', 'blocktype.qrcode'),
+                ),
+            ),
         );
     }
 
