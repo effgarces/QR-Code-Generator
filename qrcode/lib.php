@@ -125,4 +125,8 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
     public static function default_copy_type() {
         return 'full';
     }
+
+    public static function get_css_icon($blocktypename) {
+        return 'qrcode';
+    }
 }
