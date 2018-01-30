@@ -9,15 +9,21 @@
  * @copyright  For copyright information on Mahara, please see the README file distributed with this software.
  */
 
-function toggle_custom_size() {
-    var customshidden = true;
+jQuery(function($) {
+    var toggle_custom_size = function() {
+        var customshidden = true;
 
-    if ($j("#instconf_size_container input[name='size'][value='custom']").prop('checked')) {
-        customshidden = false;
+        if ($("#instconf_size_container input[name='size'][value='custom']").prop('checked')) {
+            customshidden = false;
+        }
+
+        $('#instconf_height_container').toggleClass("hidden", customshidden);
+        $('#instconf_width_container').toggleClass("hidden", customshidden);
+        $('#instconf_height_container input').toggleClass("hidden", customshidden);
+        $('#instconf_width_container input').toggleClass("hidden", customshidden);
     }
 
-    $j('#instconf_height_container').toggleClass("hidden", customshidden);
-    $j('#instconf_width_container').toggleClass("hidden", customshidden);
-    $j('#instconf_height_container input').toggleClass("hidden", customshidden);
-    $j('#instconf_width_container input').toggleClass("hidden", customshidden);
-}
+    $("#instconf_size_container input").click(function(e) {
+        toggle_custom_size();
+    });
+});
