@@ -27,7 +27,7 @@
 
 defined('INTERNAL') || die();
 
-class PluginBlocktypeQRCode extends SystemBlocktype {
+class PluginBlocktypeQRCode extends PluginBlocktype {
 
     public static function get_title() {
         return get_string('title', 'blocktype.qrcode');
