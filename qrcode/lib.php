@@ -77,6 +77,10 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
         return true;
     }
 
+    public static function get_instance_config_javascript(BlockInstance $instance) {
+        return array('js/configform.js');
+    }
+
     public static function instance_config_form($instance) {
         $configdata = $instance->get('configdata');
 
@@ -96,7 +100,7 @@ class PluginBlocktypeQRCode extends SystemBlocktype {
                     'big' => get_string('size_big', 'blocktype.qrcode'),
                     'custom' => get_string('size_custom', 'blocktype.qrcode'),
                 ),
-                'separator' => '&nbsp;&nbsp;&nbsp;',
+                'onclick' => 'toggle_custom_size();',
             ),
             'height' => array(
                 'type' => 'text',
