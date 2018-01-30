@@ -27,10 +27,8 @@
 
 defined('INTERNAL') || die();
 
-$string['title'] = 'QR Code Generator';
-$string['description'] = 'Generate QR codes';
-
-$string['showtitle'] = 'Show Block Title?';
+$string['title'] = 'QR Code';
+$string['description'] = 'Display QR code for Page URL';
 
 $string['align'] = 'Align';
 $string['alignleft'] = 'Left';
