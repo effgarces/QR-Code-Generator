@@ -70,10 +70,8 @@ class PluginBlocktypeQRCode extends PluginBlocktype {
         // Render template.
         $smarty = smarty_core();
         $smarty->assign('align', $align);
-        $smarty->assign('width', $width);
-        $smarty->assign('height', $height);
-        $smarty->assign('qrcode', rawurlencode($qrcode));
         $smarty->assign('blockid', $instance->get('id'));
+        $smarty->assign('kjuaconfobject', json_encode(array('text' => $qrcode, 'size' => $width)));
         return $smarty->fetch('blocktype:qrcode:qrcode.tpl');
     }
 
@@ -83,6 +81,10 @@ class PluginBlocktypeQRCode extends PluginBlocktype {
 
     public static function get_instance_config_javascript(BlockInstance $instance) {
         return array('js/configform.js');
+    }
+
+    public static function get_instance_javascript(BlockInstance $instance) {
+        return array('js/kjua.min.js');
     }
 
     public static function instance_config_form($instance) {
