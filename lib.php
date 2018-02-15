@@ -44,20 +44,16 @@ class PluginBlocktypeQRCode extends PluginBlocktype {
     public static function render_instance(BlockInstance $instance, $editing = false) {
         $configdata = $instance->get('configdata');
         $size = (!empty($configdata['size']) ? hsc($configdata['size']) : 'medium');
-        $height = (!empty($configdata['height']) ? hsc($configdata['height']) : '200');
         $width = (!empty($configdata['width']) ? hsc($configdata['width']) : '200');
 
         switch ($size) {
             case 'small':
-                $height = '100';
                 $width = '100';
                 break;
             case 'medium':
-                $height = '200';
                 $width = '200';
                 break;
             case 'big':
-                $height = '300';
                 $width = '300';
                 break;
         }
@@ -102,13 +98,6 @@ class PluginBlocktypeQRCode extends PluginBlocktype {
                     'custom' => get_string('size_custom', 'blocktype.qrcode'),
                 ),
                 'onclick' => 'toggle_custom_size();',
-            ),
-            'height' => array(
-                'type' => 'text',
-                'title' => get_string('height', 'blocktype.qrcode'),
-                'size' => 1,
-                'defaultvalue' => (!empty($configdata['height']) ? hsc($configdata['height']) : '200'),
-                'class' => ((isset($configdata['size']) && hsc($configdata['size']) == 'custom') ? '' : 'hidden'),
             ),
             'width' => array(
                 'type' => 'text',

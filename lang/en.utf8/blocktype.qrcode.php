@@ -41,5 +41,4 @@ $string['size_medium'] = 'Medium';
 $string['size_big'] = 'Big';
 $string['size_custom'] = 'Custom size';
 
-$string['height'] = 'Height';
-$string['width'] = 'Width';
+$string['width'] = 'Width (in pixels)';

@@ -17,9 +17,7 @@ jQuery(function($) {
             customshidden = false;
         }
 
-        $('#instconf_height_container').toggleClass("hidden", customshidden);
         $('#instconf_width_container').toggleClass("hidden", customshidden);
-        $('#instconf_height_container input').toggleClass("hidden", customshidden);
         $('#instconf_width_container input').toggleClass("hidden", customshidden);
     }
 
