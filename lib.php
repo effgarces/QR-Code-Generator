@@ -67,7 +67,7 @@ class PluginBlocktypeQRCode extends PluginBlocktype {
         $smarty = smarty_core();
         $smarty->assign('align', $align);
         $smarty->assign('blockid', $instance->get('id'));
-        $smarty->assign('kjuaconfobject', json_encode(array('text' => $qrcode, 'size' => $width)));
+        $smarty->assign('kjuaconfobject', json_encode(array('text' => $qrcode, 'size' => $width, 'ecLevel' => 'M', 'rounded' => 50)));
         return $smarty->fetch('blocktype:qrcode:qrcode.tpl');
     }
 
