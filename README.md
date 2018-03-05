@@ -11,5 +11,6 @@ Place the content of the plugin in ``htdocs/blocktype/qrcode`` and navigate to
 
 ## Credits
 
+- [lrsjng/kjua](https://github.com/lrsjng/kjua)
 - [effgarces](https://github.com/effgarces/QR-Code-Generator)
 - [Liip](https://www.liip.ch/)
