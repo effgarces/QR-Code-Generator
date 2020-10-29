@@ -41,7 +41,7 @@ class PluginBlocktypeQRCode extends PluginBlocktype {
         return array('general');
     }
 
-    public static function render_instance(BlockInstance $instance, $editing = false) {
+    public static function render_instance(BlockInstance $instance, $editing = false, $versioning = false) {
         $configdata = $instance->get('configdata');
         $size = (!empty($configdata['size']) ? hsc($configdata['size']) : 'medium');
         $width = (!empty($configdata['width']) ? hsc($configdata['width']) : '200');
